@@ -7,10 +7,40 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+extension Date {
+    var strDateTimeNoTimezone: String {
+        let mytime = Date()
+        let format = DateFormatter()
+        format.timeStyle = .short
+        format.timeZone = .none
+        format.dateStyle = .long
+        let dateStr = format.string(from: mytime)
+        //print(format.string(from: mytime))
+        
+        return dateStr
+    }
+}
+
+extension UITextView {
+   func scrollToTextEnd() {
+           let range = NSMakeRange((text?.count ?? 0) - 1, 0)
+           self.scrollRangeToVisible(range)
+   }
     
-    let mainFontName: String = "System"
-    let COUNTER_DEFAULT = 0
+    /*
+    var text: String? {
+        set {
+            self.text = newValue
+            scrollToTextEnd()
+        }
+        get {
+            return self.text
+        }
+    }
+    */
+}
+
+class ViewController: UIViewController {
     
     var counter: Int = 0
     
@@ -25,31 +55,50 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        updateCounterLabel()
+        textViewLog.text = "History\n\n"
+        
+        //updateCounterLabel()
     }
     
     @IBAction func buttonPlusTouch(_ sender: Any) {
         counter += 1
         updateCounterLabel()
+        
+        textViewLog.text += "\(getDateTimeCurrentStr()) value was changed +1\n"
+        textViewLog.scrollToTextEnd()
     }
     
     @IBAction func buttonSubTouch(_ sender: Any) {
         if counter == 0 {
+            textViewLog.text += "\(getDateTimeCurrentStr()) trying to set counter value < 0 \n"
+            textViewLog.scrollToTextEnd()
+            
             return
         }
         
         counter -= 1
         updateCounterLabel()
+        
+        textViewLog.text += "\(getDateTimeCurrentStr()) value was changed -1\n"
+        textViewLog.scrollToTextEnd()
     }
     
-    @IBAction func buttonRestTouch(_ sender: Any) {
+    @IBAction func buttonResetTouch(_ sender: Any) {
         counter = 0
         updateCounterLabel()
-    }
+        
+        textViewLog.text += "\(getDateTimeCurrentStr()) value was reseted\n"
+        textViewLog.scrollToTextEnd()
+    }   
     
     private func updateCounterLabel() {
-        labelCounter.text = String(counter)
+        labelCounter.text = "Counter value: \(counter)"
+        
     }
     
+    private func getDateTimeCurrentStr() -> String {
+        let dateTimeCurrent = Date()
+        return dateTimeCurrent.strDateTimeNoTimezone
+    }
 }
 
