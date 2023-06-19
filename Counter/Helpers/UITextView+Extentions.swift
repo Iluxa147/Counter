@@ -9,7 +9,8 @@ import Foundation
 import UIKit
 
 extension UITextView {
-    func scrollToTextEnd() {
+    func addTextScroll(_ msg: String) {
+        text += msg
         self.scrollRangeToVisible(selectedRange)
     }
 }

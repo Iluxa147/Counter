@@ -10,11 +10,9 @@ import Foundation
 extension Date {
     var strDateTimeNoTimezone: String {
         let dateCurrent = Date()
-        let format = DateFormatter()
-        format.timeStyle = .short
-        format.timeZone = .none
-        format.dateStyle = .long
-        let dateStr = format.string(from: dateCurrent)
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd.MM.yyyy HH:mm"
+        let dateStr = formatter.string(from: dateCurrent)
         
         return dateStr
     }
