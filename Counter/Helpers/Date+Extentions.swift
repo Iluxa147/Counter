@@ -19,3 +19,8 @@ extension Date {
         return dateStr
     }
 }
+
+func getDateTimeCurrentStr() -> String {
+    let dateTimeCurrent = Date()
+    return dateTimeCurrent.strDateTimeNoTimezone
+}
