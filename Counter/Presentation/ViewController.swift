@@ -26,6 +26,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         textViewLog.text = "History\n\n"
+        //textViewLog.textStorage.delegate = self
     }
     
     @IBAction func buttonPlusTouch(_ sender: Any) {

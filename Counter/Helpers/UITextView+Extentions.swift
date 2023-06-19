@@ -10,9 +10,6 @@ import UIKit
 
 extension UITextView {
     func scrollToTextEnd() {
-        let range = NSMakeRange(text.count - 1, 0)
-        self.scrollRangeToVisible(range)
+        self.scrollRangeToVisible(selectedRange)
     }
-    
-    
 }
