@@ -26,7 +26,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         textViewLog.text = "History\n\n"
-        //textViewLog.textStorage.delegate = self
     }
     
     @IBAction func buttonPlusTouch(_ sender: Any) {
@@ -56,10 +55,4 @@ class ViewController: UIViewController {
         textViewLog.text += "\(getDateTimeCurrentStr()) value was reseted\n"
         textViewLog.scrollToTextEnd()
     }
-    
-    private func getDateTimeCurrentStr() -> String {
-        let dateTimeCurrent = Date()
-        return dateTimeCurrent.strDateTimeNoTimezone
-    }
 }
-
