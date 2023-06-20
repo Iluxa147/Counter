@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -85,11 +84,11 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="buttonPlus" destination="4vL-Jw-XDn" id="emT-eW-hiZ"/>
-                        <outlet property="buttonResetCounter" destination="iXq-YS-zTL" id="VoI-sY-eFP"/>
-                        <outlet property="buttonSub" destination="2Vh-2Q-gxH" id="R40-bx-8by"/>
-                        <outlet property="labelCounter" destination="blm-qG-unF" id="IC9-fk-Ig3"/>
-                        <outlet property="textViewLog" destination="n6B-vk-i0a" id="NSd-Qm-mce"/>
+                        <outlet property="counterLabel" destination="blm-qG-unF" id="IC9-fk-Ig3"/>
+                        <outlet property="logTextView" destination="n6B-vk-i0a" id="NSd-Qm-mce"/>
+                        <outlet property="plusButton" destination="4vL-Jw-XDn" id="emT-eW-hiZ"/>
+                        <outlet property="resetCounterButton" destination="iXq-YS-zTL" id="VoI-sY-eFP"/>
+                        <outlet property="subButton" destination="2Vh-2Q-gxH" id="R40-bx-8by"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
