@@ -17,8 +17,8 @@
 		C8EBFA372A3F699800574770 /* CounterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8EBFA362A3F699800574770 /* CounterTests.swift */; };
 		C8EBFA412A3F699800574770 /* CounterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8EBFA402A3F699800574770 /* CounterUITests.swift */; };
 		C8EBFA432A3F699800574770 /* CounterUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8EBFA422A3F699800574770 /* CounterUITestsLaunchTests.swift */; };
-		C8EBFA542A3FADB100574770 /* Date+Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8EBFA532A3FADB100574770 /* Date+Extentions.swift */; };
-		C8EBFA562A3FAE3D00574770 /* UITextView+Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8EBFA552A3FAE3D00574770 /* UITextView+Extentions.swift */; };
+		C8EBFA542A3FADB100574770 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8EBFA532A3FADB100574770 /* Date+Extensions.swift */; };
+		C8EBFA562A3FAE3D00574770 /* UITextView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8EBFA552A3FAE3D00574770 /* UITextView+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,8 +53,8 @@
 		C8EBFA3C2A3F699800574770 /* CounterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CounterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8EBFA402A3F699800574770 /* CounterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterUITests.swift; sourceTree = "<group>"; };
 		C8EBFA422A3F699800574770 /* CounterUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		C8EBFA532A3FADB100574770 /* Date+Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extentions.swift"; sourceTree = "<group>"; };
-		C8EBFA552A3FAE3D00574770 /* UITextView+Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView+Extentions.swift"; sourceTree = "<group>"; };
+		C8EBFA532A3FADB100574770 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
+		C8EBFA552A3FAE3D00574770 /* UITextView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,8 +161,8 @@
 		C8EBFA522A3FAD8E00574770 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				C8EBFA532A3FADB100574770 /* Date+Extentions.swift */,
-				C8EBFA552A3FAE3D00574770 /* UITextView+Extentions.swift */,
+				C8EBFA532A3FADB100574770 /* Date+Extensions.swift */,
+				C8EBFA552A3FAE3D00574770 /* UITextView+Extensions.swift */,
 				C8328F522A4094B600C24D69 /* Utils.swift */,
 			);
 			path = Helpers;
@@ -299,10 +299,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C8EBFA562A3FAE3D00574770 /* UITextView+Extentions.swift in Sources */,
+				C8EBFA562A3FAE3D00574770 /* UITextView+Extensions.swift in Sources */,
 				C8EBFA242A3F699600574770 /* ViewController.swift in Sources */,
 				C8EBFA202A3F699600574770 /* AppDelegate.swift in Sources */,
-				C8EBFA542A3FADB100574770 /* Date+Extentions.swift in Sources */,
+				C8EBFA542A3FADB100574770 /* Date+Extensions.swift in Sources */,
 				C8EBFA222A3F699600574770 /* SceneDelegate.swift in Sources */,
 				C8328F532A4094B600C24D69 /* Utils.swift in Sources */,
 			);

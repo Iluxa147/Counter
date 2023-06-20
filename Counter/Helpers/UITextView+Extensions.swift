@@ -1,11 +1,10 @@
 //
-//  UITextView+Extentions.swift
+//  UITextView+Extensions.swift
 //  Counter
 //
 //  Created by Ilya Pokolev on 19.06.2023.
 //
 
-import Foundation
 import UIKit
 
 extension UITextView {
