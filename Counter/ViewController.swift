@@ -7,50 +7,59 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-    private var counterVal: Int = 0
+final class ViewController: UIViewController {
+    // MARK: - UI
+    @IBOutlet weak private var counterLabel: UILabel!
+    @IBOutlet weak private var logTextView: UITextView!
     
-    @IBOutlet private var counterLabel: UILabel!
-    @IBOutlet private var logTextView: UITextView!
-    
+    // MARK: - State
+    private var counter: Int = 0
+
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setCounterValView()
-        logTextView.isEditable = false
-        logTextView.text = "История изменений\n"
+        configureUI()
+        updateCounterLabel()
     }
 
+    // MARK: - Actions
     @IBAction private func incrementButtonUp(_ sender: Any) {
-        counterVal += 1
-        setCounterValView()
-        logValueChange(true)
+        counter += 1
+        updateCounterLabel()
+        logChange("+1")
     }
     
     @IBAction private func decrementButtonUp(_ sender: Any) {
-        if (counterVal - 1 < 0) {
-            counterVal = 0
+        if (counter - 1 < 0) {
+            counter = 0
             logTextView.addTextScrollToBottom("\(Date.formatRu()): попытка уменьшить значение счётчика ниже 0\n")
         } else {
-            counterVal -= 1
-            logValueChange(false)
+            counter -= 1
+            logChange("-1")
         }
         
-        setCounterValView()
+        updateCounterLabel()
     }
     
     @IBAction private func resetCounterButtonUp(_ sender: Any) {
-        counterVal = 0
-        setCounterValView()
+        counter = 0
+        updateCounterLabel()
         logTextView.addTextScrollToBottom("\(Date.formatRu()): значение сброшено\n")
     }
     
-    private func setCounterValView() {
-        counterLabel.text = "\(counterVal)"
+    // MARK: - Private
+    private func configureUI() {
+        logTextView.isEditable = false
+        logTextView.text = "История изменений\n"
     }
     
-    private func logValueChange(_ doIncrement: Bool) {
-        logTextView.addTextScrollToBottom("\(Date.formatRu()): значение изменено на \(doIncrement ? "+1" : "-1")\n")
+    private func updateCounterLabel() {
+        counterLabel.text = "\(counter)"
+    }
+    
+    private func logChange(_ value: String) {
+        logTextView.addTextScrollToBottom("\(Date.formatRu()): значение изменено на \(value)\n")
     }
 }
 
